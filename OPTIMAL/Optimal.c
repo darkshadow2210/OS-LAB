@@ -1,17 +1,13 @@
-  #include <stdio.h>
-
+#include <stdio.h>
 int i, j, nof, nor, flag = 0, ref[50], frm[50], pf = 0, victim = -1;
 int recent[10], optcal[50], count = 0;
-
 int optvictim(int index);
 
 void main() {
     printf("\nOPTIMAL PAGE REPLACEMENT ALGORITHM\n");
     printf("-----------------------------------\n");
-
     printf("Enter the number of frames: ");
     scanf("%d", &nof);
-
     printf("Enter the number of reference string elements: ");
     scanf("%d", &nor);
 
@@ -19,7 +15,6 @@ void main() {
     for (i = 0; i < nor; i++) {
         scanf("%d", &ref[i]);
     }
-
     printf("\nThe given reference string: ");
     for (i = 0; i < nor; i++) {
         printf("%d ", ref[i]);
@@ -60,7 +55,6 @@ void main() {
                 printf("%d ", frm[j]);
         }
     }
-
     printf("\n\nTotal number of page faults: %d\n", pf);
 }
 
@@ -92,4 +86,3 @@ int optvictim(int index) {
 
     return 0;
 }
-
